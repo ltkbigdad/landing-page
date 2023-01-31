@@ -1,0 +1,744 @@
+/*
+Theme Name: Landing Page Kenzie Academy
+Theme URI: https://kenzie.com.br/
+Author: Kenzie Academy 
+Author URI: https://kenzie.com.br/
+Description: Descrção do thema.
+Version: 1.0
+Text Domain: https://kenzie.com.br/
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+family=Montserrat -> Menus
+family=Lato -> Títulos, textos
+*/
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* FONTS */
+
+/* VARIÁVEIS */
+:root{
+    --Branco-Primário: #FFFFFF;
+    --Branco-Secundário: #f6f6f6;
+    --Azul-Claro: #007aff;
+    --Azul-Escuro: #00043e;
+    --Cinza-Claro: #818181;
+    --Cinza-Escuro: #303030;
+}
+  
+/* GERAL */
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+img{
+    max-width: 800px;
+}
+div.flex{
+    display: flex;
+}
+div.full-container{
+    width: 100%;
+    max-width: 1850px;
+    margin:0 auto;
+}
+div.large-container{
+    width: 100%;
+    max-width: 1170px;
+    margin:0 auto;
+}
+div.container{
+    width: 100%;
+    max-width: 1140px;
+    margin:0 auto;
+}
+/* GERAL */
+  
+/* HTML */
+html{}
+/* HTML */
+  
+/* BODY */
+body{}
+
+h2{
+    font-family: 'Montserrat';
+}
+/* BODY */
+  
+/* HEADER */
+header{
+   background-color: var(--Azul-Escuro);
+   }
+
+.large-container{
+    display: flex;
+    justify-content: space-between;
+}   
+
+.imgLogo{
+    width: 23%;
+    padding: 10px;
+}
+
+.menu{
+padding-right: 10px;
+}
+
+.imgMenu{
+    padding: 10px;
+    width: 70%; 
+    color: var(--Cinza-Claro);
+}
+
+nav{
+    display: none;
+}
+
+figcaption{
+    display: none;
+}
+/* HEADER */
+  
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+footer p{
+    display: none;
+}
+footer p a{
+    text-decoration: none;
+    color: #407CBB;
+}
+footer p a:hover span{
+    text-decoration: underline;
+}
+/* FOOTER */
+
+/* INICIAL */
+main{}
+/*Cursos*/
+.secaoCursos h2{
+    font-family: 'Montserrat', sans-serif;
+}
+.secaoCursos p, .secaoCursos h3, .secaoCursos a{
+    font-family: 'Lato', sans-serif;
+}
+.secaoCursos h2, .secaoCursos h3{
+    font-size: 19px;
+    color: #272727;
+}
+.secaoCursos p{
+    font-size: 15px;
+}
+.secaoCursos h3{
+    font-weight: normal;
+}
+.secaoCursos{
+    padding: 3rem 0;
+}
+.secaoCursos article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secaoCursos article > h2, .secaoCursos article > p{
+    margin: 4% 0
+}
+.secaoCursos article ul{
+    margin-top: 8%;
+    display: flex;
+    width: 320px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.secaoCursos article ul li{
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+    height: 220px;
+    width: 320px;
+}
+.secaoCursos article ul li img{
+    width: 100px;
+    margin: 0 0 3%;
+}
+.secaoCursos article ul li p{
+    color: #898E91;
+    margin: 7% 5% 0;
+}
+/*Cursos*/
+/*Contato*/
+.secaoContato h2{
+    display: none;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+.secaoContato li, .secaoContato p{
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+    margin: 1rem 0;
+}
+.secaoContato{
+    display: flex;
+    background-color: #F6F6F6;
+    padding: 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+.secaoContato, .secaoContato a{
+    color: #818181;
+    text-decoration: none;
+}
+.secaoContato .flex{
+    flex-direction: column;
+    width: 320px;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+}
+.secaoContato .secaoContato-informacoes::before{
+    content: "Contact";
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+.secaoContato input, .secaoContato textarea{
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #818181;
+}
+.secaoContato textarea{
+    display: inline-block;
+    height: 5rem;
+}
+.secaoContato label{
+    display: none;
+}
+.secaoContato form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.secaoContato input[type="submit"]{
+    width: max-content;
+    padding: 0 1rem;
+    margin-left: auto;
+}
+.secaoContato .flex-col{
+    width: 100%;
+}
+/*Contato*/
+/*Sobre*/
+.secaoSobre {
+    display: flex;
+    justify-content: center;
+}
+.secaoSobre article .flex-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.secaoSobre .flex-col p, .secaoSobre .flex-col li, .secaoSobre .flex-col span, .secaoSobre .flex-col button {
+font-size: 19px;
+font-family: lato;
+}
+.secaoSobre h2 {
+    font-size: 24px;
+    font-family: "Montserrat",sans-serif;
+}
+.secaoSobre .flex .flex-col  {
+     text-align: left;
+}
+.secaoSobre .flex .flex-col p {
+    margin: 4rem 0;
+    text-align: left;
+}
+.secaoSobre .flex-col span {
+    color: #818181;
+}
+.secaoSobre .flex-col button {
+    margin: 3rem 0;
+    border-radius: 10px;
+    padding: 1rem 0;
+    border: 1px solid lightgray;
+    background-color: #fff;
+}
+.secaoSobre .flex-col button:hover {
+    background-color: #818181;
+    cursor: pointer;
+    color: #fff;
+}
+.secaoSobre article .flex-col figcaption {
+    display: none;
+}
+.secaoSobre .flex-col .python {
+    width: 70%;
+    height: 70%;
+}
+.secaoSobre .flex-col .javascript {
+    width: 40%;
+    height: 40%;
+}
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secaoSobre .flex-col .js{
+    text-align: center;
+    margin: 1rem 0 3rem;
+}
+.secaoSobre article .flex-col figure img {
+    width: 100%;
+}
+.secaoSobre .flex-col ul {
+    list-style: disc;
+    margin: 0 1rem;
+}
+.secaoSobre .flex-col ul li {
+    color: #818181;
+    line-height: 2rem;
+}
+.secaoSobre article > div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+.secaoSobre article  .divjs {
+    background-color: #F6F6F6;
+}
+/*Sobre*/
+/*destaque*/
+.secaoDestaque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Azul-Escuro);
+    padding-bottom: 120px;
+}
+
+.tituloDestaque{
+    font-size: 30px;
+    color: var(--Branco-Secundário);
+    text-align: center;
+    font-weight: 400;
+    width: 75%;
+
+}
+
+.paragrafoDestaque{
+    font-size: 24px;
+    color: var(--Branco-Secundário);
+    padding: 11px;
+    font-weight: 14;
+    width: 64%;
+    text-align: center;
+}
+
+.secaoDestaqueFormulario{
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+
+.secaoDestaqueFormulario input{
+    width: 68%;
+    height: 37px;
+    border: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: var(--Cinza-Claro);
+    font-size: 14px;    
+}
+
+.secaoDestaque button{
+    width: 30%;
+    border: 0;
+    padding: 0px 8px;
+    height: 37px;
+    border-top-right-radius:  4px;
+    border-bottom-right-radius: 4px;
+    font-size: 14px;
+    color: var(--Branco-Secundário);
+    background-color: var(--Azul-Claro);
+    display: inline-block;
+}
+
+.flex-col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* destaque*/
+/* INICIAL */
+
+/* EXTRAS */
+
+/* para estilizar a scrollbar */
+::-webkit-scrollbar{}
+::-webkit-scrollbar-button{}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-track-piece{}
+::-webkit-scrollbar-thumb{}
+::-webkit-scrollbar-corner{}
+::-webkit-resizer{}
+
+/* EXTRAS */
+  
+
+/* MEDIA QUERIES */
+    @media screen and (min-width: 720px) {
+        .large-container{
+            display: flex;
+            justify-content: space-around;
+        }
+       
+        .imgLogo{
+            width: 30px;
+            padding: 10px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menuUl{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+
+        .listMenu{
+            padding: 15px;          
+        }
+
+        .listMenu a{
+            color: var(--Branco-Secundário);
+            text-decoration: none;         
+        }    
+
+        
+
+        .secaoDestaque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--Azul-Escuro);
+            image-rendering: 100%;
+            padding-bottom: 120px;
+        }
+
+        .secaoDestaqueFormulario{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .secaoDestaqueFormulario input{
+            width: 48%;
+            height: 37px;
+            border: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: var(--Cinza-Claro);
+            font-size: 14px;    
+        }
+        
+        .secaoDestaque button{
+            width: 13%;
+            border: 0;
+            padding: 0px 8px;
+            height: 37px;
+            border-top-right-radius:  4px;
+            border-bottom-right-radius: 4px;
+            font-size: 14px;
+            color: var(--Branco-Secundário);
+            background-color: var(--Azul-Claro);
+            display: inline-block;
+        }
+
+        
+        
+
+        
+    }
+  
+    @media screen and (min-width: 1024px) {
+        .large-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+       
+        .imgLogo{
+            width: 54px;
+            padding: 10px;
+            padding-left: 42px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menuUl{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-right: 22px;
+        }
+
+        .listMenu{
+            padding: 15px; 
+            letter-spacing: 3px;         
+        }
+
+        .listMenu a{
+            font-family: 'Lato', sans-serif ;
+            font-size: 13px;
+            color: var(--Branco-Secundário);
+            text-decoration: none;         
+        }    
+
+        
+
+        .secaoDestaque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/background-destaque.png);
+            background-position: fixed;
+            background-size: cover;
+            padding-top: 248px;
+            padding-bottom: 326px;
+            
+        }
+
+        .secaoDestaqueFormulario{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .tituloDestaque{
+            font-size: 63px;
+            color: var(--Branco-Secundário);
+            text-align: center;
+            font-weight: 400;
+            width: 75%;
+        
+        }
+        
+        .paragrafoDestaque{
+            font-size: 21px;
+            font-family: "Lato", sans-serif;            
+            color: var(--Branco-Secundário);
+            padding: 18px;
+            font-weight: 14;
+            width: 64%;
+            text-align: center;
+        }
+
+        .secaoDestaqueFormulario input{
+            width: 25%;
+            height: 37px;
+            border: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: var(--Cinza-Claro);
+            font-size: 14px;    
+        }
+        
+        .secaoDestaque button{
+            width: 5%;
+            border: 0;
+            padding: 0px 8px;
+            height: 37px;
+            border-top-right-radius:  4px;
+            border-bottom-right-radius: 4px;
+            font-size: 14px;
+            font-family: "Lato", sans-serif;
+            color: var(--Branco-Secundário);
+            background-color: var(--Azul-Claro);
+            display: inline-block;
+        }
+
+
+
+    }
+    @media screen and (min-width: 720px) {
+        /*Cursos/Footer*/
+        .secaoCursos article > h2, .secaoCursos article > p{
+            margin: 2% 0
+        }
+        .secaoCursos article ul{
+            width: 720px;
+            margin-top: 5%;
+        }
+        .secaoCursos article ul li{
+            margin-top: 3%;
+        }
+        footer p{
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        /*Cursos Footer*/
+        /*Contato*/
+        .secaoContato .flex{
+            flex-direction: row;
+            width: 720px;
+            padding: 0 1.5rem;
+            flex-wrap: wrap;
+        }
+        .secaoContato .flex-col{
+            width: 48%;
+        }
+        .secaoContato .secaoContato-informacoes::before{
+            display: none;
+        }
+        .secaoContato h2{
+            display: inline-block;
+        }
+        .secaoContato form{
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        .secaoContato .form-input-model:nth-child(-n+2){
+            width: 48%;
+        }
+        .secaoContato .form-input-model:nth-child(3){
+            width: 100%;
+        }
+        .secaoContato input, .secaoContato textarea{
+            width: 100%;
+        }
+        /*Contato*/
+        /*Cursos/Footer*/
+        .secaoCursos article > h2, .secaoCursos article > p{
+            margin: 2% 0
+        }
+        .secaoCursos article ul{
+            width: 720px;
+            margin-top: 5%;
+        }
+        .secaoCursos article ul li{
+            margin-top: 3%;
+        }
+        footer p{
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        /*Cursos Footer*/
+    }
+    @media screen and (min-width: 1024px) {
+        /*Cursos/Footer*/
+        .secaoCursos article ul{
+            width: 1024px;
+            margin-top: 3%;
+        }
+        footer p{
+            display: inline-block;
+            margin-top: 2rem;
+        }
+        /*Cursos/Footer*/
+        /*Contato*/
+        .secaoContato .flex{
+            width: 1024px;
+        }
+        /*Contato*/
+        .secaoSobre article > div {
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .secaoSobre article > div {
+            flex-direction: row;
+        }
+        .secaoSobre .flex-col {
+            width: 48%;
+        }
+        .secaoSobre .flex-col .python {
+            width: 100%;
+            height: 100%;
+        }
+        .secaoSobre .flex-col .javascript {
+            width: 250px;
+            height: 250px;
+        }
+        .secaoSobre .flex-col .js {
+            text-align: left;
+        }
+        .secaoSobre .flex-col ul {
+            margin-left: 3rem;
+        }
+        .secaoSobre .flex-col {
+            width: 37%;
+        }
+        .secaoSobre .flex-col button {
+            width: max-content;
+            padding: 1rem;
+        }
+    }
+
+/* MEDIA QUERIES */
